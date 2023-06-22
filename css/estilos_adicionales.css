@@ -9,7 +9,8 @@
 /* ESTILOS GENERALES*/
 :root {
     --color-header: rgb(40, 8, 154);
-    --color-barra-navegacion: rgb(8, 173, 214);
+    --color-barra-navegacion: lightblue;
+    --color-fondo-main: rgb(38, 73, 250);
 }
 
 body {
@@ -86,7 +87,7 @@ a:visited { text-decoration: none; color: blue}
 
 main section{
     padding: 3px;
-    background-color: green;
+    background-color: var(--color-fondo-main);
 }
 
 .exclusive-offers{
@@ -111,6 +112,17 @@ main section{
     margin-left: auto;
     margin-right: auto;
     width: 75%;
+}
+
+.activity {
+    margin-top: 6px;
+    margin-left: 6px;
+}
+
+.activity>h2 {
+    color: white;
+    background-color: rgb(42, 41, 41);
+    padding: 0px;
 }
 
 /* PLANTILLA DE PRODUCTOS */
