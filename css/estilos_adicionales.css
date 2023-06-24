@@ -14,7 +14,9 @@
 }
 
 body {
-    width: 1000px;
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: rgb(252, 216, 186);
 }
 
 /* Color texto links */
@@ -92,6 +94,15 @@ main section{
 
 .exclusive-offers{
     width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.exclusive-offers>h2 {
+    color: white;
+    padding: 5px;
 }
 
 .art-offer h3 {
@@ -99,30 +110,77 @@ main section{
 }
 
 .art-offer{
-    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
     width: 240px;
     margin: 2px;
-    display: inline-block;
-    vertical-align: top;
+    background-color: rgb(252, 216, 186);
 }
 
 /* Imagenes de productos */
-.art-offer img {
+.art-offer>img {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 75%;
 }
 
+.art-details {
+    padding-bottom: 10px;
+    flex: 1;
+    color: white;
+}
+
+.art-offer>footer {
+    padding: 4px;
+}
+
+.art-offer button {
+    margin-top: 5px;
+}
+
+/* ACTIVIDAD RECIENTE */
 .activity {
     margin-top: 6px;
+    border: 2px solid black;
     margin-left: 6px;
+    padding: 0;
 }
 
 .activity>h2 {
     color: white;
     background-color: rgb(42, 41, 41);
-    padding: 0px;
+    padding: 5px;
+}
+
+.activity th, td{
+    color: white;
+    padding: 8px;
+}
+
+.activity table {
+    border-collapse: collapse;
+}
+
+tr { 
+    border: solid;
+    border-width: 1px 0;
+}
+
+td > button {
+    margin-left: 12px;
+}
+
+
+button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 8px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
 }
 
 /* PLANTILLA DE PRODUCTOS */
