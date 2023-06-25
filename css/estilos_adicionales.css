@@ -8,21 +8,24 @@
 
 /* ESTILOS GENERALES*/
 :root {
-    --color-header: rgb(40, 8, 154);
-    --color-barra-navegacion: lightblue;
-    --color-fondo-main: rgb(38, 73, 250);
+    --color-blanco: white;
+    --color-azul: rgb(40, 8, 154);
+    --color-celeste: rgb(29, 150, 190);
+    --color-gris: rgb(51,81,96);
+    --color-rosa: rgb(198,0,212);
+    --color-verde: rgb(76, 175, 80);
 }
 
 body {
     max-width: 1000px;
     margin: 0 auto;
-    background-color: rgb(252, 216, 186);
+    background-color: var(--color-celeste);
 }
 
 button {
-    background-color: #4CAF50;
+    color: var(--color-blanco);
+    background-color: var(--color-verde);
     border: none;
-    color: white;
     padding: 8px 10px;
     text-align: center;
     text-decoration: none;
@@ -32,15 +35,15 @@ button {
 }
 
 /* Color texto links */
-a:link { text-decoration: none; color: blue}
-a:visited { text-decoration: none; color: blue}
+a:link { text-decoration: none; color: var(--color-blanco);}
+a:visited { text-decoration: none; color: var(--color-blanco);}
 
 /* ESTILOS DE CABECERA PRINCIPAL*/
 .main-header{
     display: flex;
     flex-direction: row;
     align-items: center;
-    background-color: var(--color-header);
+    background-color: var(--color-azul);
 }
 
 /* Reordena los elementos del header (logo, titulo, notificaciones)*/
@@ -54,23 +57,31 @@ a:visited { text-decoration: none; color: blue}
 }
 
 .main-header h1 {
+    color: var(--color-blanco);
     margin-left: 50px;
-    color: white;
 }
 
 .notifications {
+    color: var(--color-blanco);
     margin-left: auto;
     margin-right: 25px;
-    color: goldenrod;
 }
 
 
 /* ESTILOS DE BARRA DE NAVEGACIÓN */
 .main-menu{
-    background-color: var(--color-barra-navegacion);
+    background-color: var(--color-celeste);
     display: flex;
     flex-direction: column;
     float: left;
+    border-left: 1px solid black;
+}
+
+.main-menu h2 {
+    color: var(--color-blanco);
+    padding-top: 15px;
+    padding-bottom: 10px;
+    border-top: 1px solid black;
 }
 
 /* Links menu lateral */ 
@@ -93,7 +104,7 @@ a:visited { text-decoration: none; color: blue}
 
 /* Color de fondo al pasar el mouse sobre una opcion del menu lateral*/
 .main-menu a:hover {
-    background-color: orange;
+    background-color: var(--color-rosa);
 }
 
 
@@ -101,10 +112,11 @@ a:visited { text-decoration: none; color: blue}
 
 main section{
     padding: 3px;
-    background-color: var(--color-fondo-main);
+    background-color: var(--color-azul);
 }
 
 .exclusive-offers{
+    color: var(--color-blanco);
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -115,7 +127,8 @@ main section{
 }
 
 .exclusive-offers>h2 {
-    color: white;
+    color: var(--color-blanco);
+    text-shadow: var(--color-rosa) 3px 2px 2px;
     padding: 5px;
 }
 
@@ -128,7 +141,7 @@ main section{
     flex-direction: column;
     width: 240px;
     margin: 2px;
-    background-color: rgb(252, 216, 186);
+    background-color: var(--color-gris);
 }
 
 /* Imagenes de productos */
@@ -142,11 +155,11 @@ main section{
 .art-details {
     padding-bottom: 10px;
     flex: 1;
-    color: white;
+    color: var(--color-blanco);
 }
 
 .art-offer>footer {
-    padding: 4px;
+    padding: 6px;
 }
 
 .art-offer button {
@@ -155,23 +168,24 @@ main section{
 
 /* ACTIVIDAD RECIENTE */
 .activity {
-    border: 2px solid black;
+    /* border: 2px solid var(--color-rosa); */
     padding: 0;
     border-radius: 6px;
     margin-top: 30px;
     margin-left: 80px;
-    box-shadow: 3px 3px black
+    box-shadow: -0.4em 0 0.4em var(--color-rosa), 3px 3px var(--color-rosa);
 }
 
 .activity>h2 {
-    color: white;
-    background-color: rgb(42, 41, 41);
+    color: var(--color-blanco);
+    text-shadow: var(--color-rosa) 3px 2px 2px;
+    /* background-color: var(--color-gris); */
     padding: 5px;
     text-align: center;
 }
 
 .activity th, td{
-    color: white;
+    color: var(--color-blanco);
     padding: 8px;
 }
 
@@ -185,23 +199,22 @@ main section{
 }
 
 .activity tbody>tr:hover {
-    background-color: orange;
+    background-color: var(--color-rosa);
 }
 
 /* TARJETAS */
 .cards {
-    border: 2px solid goldenrod;
     border-radius: 10px;
     padding: 0;
     margin-top: 30px;
     margin-right: 80px;
     margin-left: auto;
-    box-shadow: -0.4em 0 0.4em goldenrod, 3px 3px black;
+    box-shadow: -0.4em 0 0.4em var(--color-rosa), 3px 3px var(--color-rosa);
 }
 
-.cards>h2 {
-    color: whitesmoke;
-    text-shadow: red 3px 2px 2px;
+.cards > h2 {
+    color: var(--color-blanco);
+    text-shadow: var(--color-rosa) 3px 2px 2px;
     padding: 5px;
     text-align: center;
 }
@@ -213,13 +226,13 @@ main section{
     border-radius: 8px;
     margin-left: 6px;
     padding: 0;
-    box-shadow: 5px 10px 24px 0px rgba(198,0,212,1);
+    box-shadow: 5px 10px 24px 0px var(--color-rosa);
 }
 
 .card > *{
-    color: whitesmoke;
+    color: var(--color-blanco);
     margin-left: 6px;
-    text-shadow: rgba(198,0,212,1) 2px 2px 2px;
+    text-shadow: var(--color-rosa) 2px 2px 2px;
     transition: all .2s ease-in-out;
 }
 
@@ -236,7 +249,7 @@ main section{
     margin-bottom: 5px;
 }
 
-/* Transicion tarjetas */
+/* Transicion/Transformacion tarjetas */
 .card:hover {
     transform: scale(1.1);
     z-index: 1;
@@ -246,18 +259,20 @@ main section{
 /* CONTROL DE STOCK */
 .stock-control{
     display: flex;
-    flex: 1;
+    width: 100%;
     align-items: center;
     margin: 30px 40px 30px 40px;
     border-radius: 10px;
 }
 
 .stock-control>h2{
-    color: white;
+    color: var(--color-blanco);
+    text-shadow: var(--color-rosa) 3px 2px 2px;
     margin-left: 10px;
 }
 
 .stock-alert{
+    color: var(--color-blanco);
     width: 110px;
     height: 60px;
     margin: 5px;
@@ -271,19 +286,19 @@ main section{
 }
 
 .stock-alert[data-alert-level="high"] {
-    background-color: green;
+    background-color: var(--color-rosa);
     height: 100%;
     padding: 3px;
 }
 
 .stock-alert[data-alert-level="medium"] {
-    background-color: yellow;
+    background-color: var(--color-celeste);
     height: 100%;
     padding: 3px;
 }
 
 .stock-alert[data-alert-level="low"] {
-    background-color: red;
+    background-color: var(--color-verde);
     height: 100%;
     padding: 3px;
 }
@@ -294,9 +309,18 @@ main section{
 }
 
 /* COTIZACION DOLAR */
+.currency{
+    color: var(--color-blanco);
+    text-shadow: var(--color-rosa) 3px 2px 2px;
+    margin-left: 40px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
 .loading{
     width: 100px;
     display: flex;
+    margin-top: 20px;
 }
 .loading-item{
     width: 20px;
