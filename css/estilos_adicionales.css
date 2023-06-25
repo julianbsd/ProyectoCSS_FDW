@@ -19,6 +19,17 @@ body {
     background-color: rgb(252, 216, 186);
 }
 
+button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 8px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
 /* Color texto links */
 a:link { text-decoration: none; color: blue}
 a:visited { text-decoration: none; color: blue}
@@ -98,6 +109,8 @@ main section{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+    border-radius: 10px;
+    margin-top: 6px;
 }
 
 .exclusive-offers>h2 {
@@ -141,16 +154,19 @@ main section{
 
 /* ACTIVIDAD RECIENTE */
 .activity {
-    margin-top: 6px;
     border: 2px solid black;
-    margin-left: 6px;
     padding: 0;
+    border-radius: 6px;
+    margin-top: 10px;
+    margin-left: 80px;
+    box-shadow: 3px 3px black
 }
 
 .activity>h2 {
     color: white;
     background-color: rgb(42, 41, 41);
     padding: 5px;
+    text-align: center;
 }
 
 .activity th, td{
@@ -167,25 +183,59 @@ tr {
     border-width: 1px 0;
 }
 
-td > button {
-    margin-left: 12px;
+/* TARJETAS */
+.cards {
+    border: 2px solid goldenrod;
+    border-radius: 10px;
+    padding: 0;
+    margin-top: 10px;
+    margin-right: 80px;
+    margin-left: auto;
+    box-shadow: 3px 3px black, -0.4em 0 0.4em goldenrod;
 }
 
-
-button {
-    background-color: #4CAF50;
-    border: none;
-    color: white;
-    padding: 8px 10px;
+.cards>h2 {
+    color: whitesmoke;
+    text-shadow: red 3px 2px 2px;
+    padding: 5px;
     text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
 }
 
-/* PLANTILLA DE PRODUCTOS */
 .card{
-    background-color: brown;
+    background-color: #335160;
+    margin-top: 6px;
+    border: 2px solid black;
+    border-radius: 8px;
+    margin-left: 6px;
+    padding: 0;
+}
+
+.card > *{
+    color: whitesmoke;
+    margin-left: 6px;
+    /* text-shadow: 3px 2px goldenrod; */
+    /* text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue; */
+    text-shadow: red 2px 2px 2px;
+    transition: all .2s ease-in-out;
+}
+
+.card > h3 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.card > img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    z-index: 1;
+    margin-left: 20px;
 }
 
 /* CONTROL DE STOCK */
