@@ -52,7 +52,7 @@ a:visited { text-decoration: none; color: var(--color-blanco);}
 .main-header :nth-child(3) { order: 3; }
 
 .main-header img{
-    height: 100%;
+    height: 90%;
     margin-left: 25px;
 }
 
@@ -66,6 +66,29 @@ a:visited { text-decoration: none; color: var(--color-blanco);}
     margin-left: auto;
     margin-right: 25px;
 }
+
+/* Animacion campanita */
+@keyframes notificacion {
+    0%,
+    100% {
+      transform: rotate(0deg);
+    }
+    20%,
+    60% {
+      transform: rotate(6deg);
+    }
+    40%,
+    80% {
+      transform: rotate(-6deg);
+    }
+}
+
+/* Animacion se reproduce al pasar el mouse por encima de la campanita*/
+.notifications span:first-child:hover
+{
+    animation: notificacion .5s ease-in-out 2;
+}
+
 
 
 /* ESTILOS DE BARRA DE NAVEGACIÓN */
@@ -108,13 +131,14 @@ a:visited { text-decoration: none; color: var(--color-blanco);}
 }
 
 
-/* Productos */
+/* ESTILOS DE PRODUCTOS */
 
 main section{
     padding: 3px;
     background-color: var(--color-azul);
 }
 
+/* Contenedor ofertas */
 .exclusive-offers{
     color: var(--color-blanco);
     width: 100%;
@@ -126,13 +150,14 @@ main section{
     margin-top: 10px;
 }
 
+/* Titulo ofertas exclusivas */
 .exclusive-offers>h2 {
     color: var(--color-blanco);
     text-shadow: var(--color-rosa) 3px 2px 2px;
     padding: 8px;
 }
 
-
+/* Productos */
 .art-offer{
     display: flex;
     flex-direction: column;
@@ -142,6 +167,7 @@ main section{
     box-shadow: 2px 2px var(--color-rosa);
 }
 
+/* Nombre producto */
 .art-offer h3{
     font-size: 12px;
 }
@@ -152,6 +178,7 @@ main section{
     padding-bottom: 10px;
 }
 
+/* Precio anterior */
 .art-offer>header>p::before {
     content: "$"attr(data-art-old-price);
     display: inline-block;
@@ -159,8 +186,10 @@ main section{
     text-decoration: line-through;
     transform: rotate(-10deg);
     color: var(--color-blanco);
+    padding-right: 2px;
 }
 
+/* Precio actual */
 .art-offer>header>p {
     padding-top: 5px;
     font-size: 18px;
@@ -168,6 +197,10 @@ main section{
     text-align: center;
 }
 
+/* Precio se agranda al pasar el mouse por encima */
+.art-offer>header>p:hover {
+    transform: scale(1.5);
+}
 
 /* Imagenes de productos */
 .art-offer>img {
@@ -191,16 +224,17 @@ main section{
     margin-top: 5px;
 }
 
-/* ACTIVIDAD RECIENTE */
+
+/* ESTILOS DE ACTIVIDAD RECIENTE */
 .activity {
-    /* border: 2px solid var(--color-rosa); */
     padding: 0;
     border-radius: 6px;
-    margin-top: 40px;
+    margin-top: 60px;
     margin-left: 80px;
     box-shadow: -0.4em 0 0.4em var(--color-rosa), 3px 3px var(--color-rosa);
 }
 
+/* Titulo actividad reciente */
 .activity>h2 {
     color: var(--color-blanco);
     text-shadow: var(--color-rosa) 3px 2px 2px;
@@ -208,6 +242,7 @@ main section{
     text-align: center;
 }
 
+/* Estilos tabla actividad */
 .activity th, td{
     color: var(--color-blanco);
     padding: 8px;
@@ -222,20 +257,25 @@ main section{
     border-width: 1px 0;
 }
 
+/* Color de fondo al pasar el mouse sobre una fila de actividad reciente*/
 .activity tbody>tr:hover {
     background-color: var(--color-rosa);
 }
 
-/* TARJETAS */
+
+/* ESTILOS DE TARJETAS */
+
+/* Contenedor tarjetas */
 .cards {
     border-radius: 10px;
     padding: 0;
-    margin-top: 40px;
+    margin-top: 60px;
     margin-right: 80px;
     margin-left: auto;
     box-shadow: -0.4em 0 0.4em var(--color-rosa), 3px 3px var(--color-rosa);
 }
 
+/* Titulo tarjetas preferidas */
 .cards > h2 {
     color: var(--color-blanco);
     text-shadow: var(--color-rosa) 3px 2px 2px;
@@ -243,6 +283,7 @@ main section{
     text-align: center;
 }
 
+/* Tarjetas */
 .card{
     background-color: var(--color-gris);
     margin-top: 6px;
@@ -253,6 +294,7 @@ main section{
     box-shadow: 5px 10px 24px 0px var(--color-rosa);
 }
 
+/* Datos tarjetas */
 .card > *{
     color: var(--color-blanco);
     margin-left: 6px;
@@ -260,6 +302,7 @@ main section{
     transition: all .2s ease-in-out;
 }
 
+/* Nombres tarjetas */
 .card > h3 {
     margin-top: 5px;
     margin-bottom: 5px;
@@ -280,21 +323,24 @@ main section{
     margin-left: 20px;
 }
 
-/* CONTROL DE STOCK */
+
+/* ESTILOS DE CONTROL DE STOCK */
 .stock-control{
     display: flex;
     width: 100%;
     align-items: center;
-    margin: 40px 40px 0px 40px;
+    margin: 80px 40px 0px 40px;
     border-radius: 10px;
 }
 
+/* Titulo control de stock */
 .stock-control>h2{
     color: var(--color-blanco);
     text-shadow: var(--color-rosa) 3px 2px 2px;
     margin-left: 10px;
 }
 
+/* Cuadrados de stock de los productos */
 .stock-alert{
     color: var(--color-blanco);
     width: 110px;
@@ -309,6 +355,7 @@ main section{
     padding-bottom: 10px;
 }
 
+/* Colores segun cantidad disponible del producto */
 .stock-alert[data-alert-level="high"] {
     background-color: var(--color-rosa);
     height: 100%;
@@ -332,12 +379,13 @@ main section{
     font-weight: bold;
 }
 
-/* COTIZACION DOLAR */
+
+/* ESTILOS DE COTIZACION DOLAR */
 .currency{
     color: var(--color-blanco);
     text-shadow: var(--color-rosa) 3px 2px 2px;
-    margin-top: 40px;
-    margin-left: 40px;
+    margin-top: 80px;
+    margin-left: 35%;
     padding: 20px;
     border-radius: 10px;
 }
@@ -359,7 +407,7 @@ main section{
     border-radius: 50%;
 }
 
-/* Animacion carga cotizacion dolar */
+/* Animacion botones de carga cotizacion dolar */
 @keyframes botones-carga {
     0%   {visibility:visible; transform: translateY(0);}
     25%  {visibility:visible; transform: translateY(-10px);}
@@ -389,6 +437,7 @@ main section{
     animation-delay: 0.6s;
 }
 
+/* Animacion precio dolar */
 @keyframes cotizacion-dolar {
     0%   {visibility:hidden;}
     100% {visibility:hidden;}
@@ -403,7 +452,7 @@ main section{
 }
 
 
-/* AYUDA EN LINEA */
+/* ESTILOS DE AYUDA EN LINEA */
 .contact-support{
     color: var(--color-blanco);
     background-color: var(--color-verde);
@@ -419,11 +468,19 @@ main section{
     font-weight: bold;
 }
 
-/* FOOTER */
+
+/* ESTILOS DE FOOTER */
 .main-footer{
-    background-color: var(--color-rosa);
-    width: 100%;
-    margin-top: 100px;
+    color: var(--color-blanco);
+    background-color: var(--color-azul);
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 16%;
 }
 
-/* ESTILOS DE ...*/
+.main-footer::after {
+    content: "Ruiz-Weinzettel";
+    position: relative;
+    top: 60%;
+    left: 60%;
+}
