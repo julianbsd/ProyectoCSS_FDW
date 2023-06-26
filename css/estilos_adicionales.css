@@ -132,17 +132,42 @@ main section{
     padding: 8px;
 }
 
-.art-offer h3 {
-    font-size: 12px;
-}
 
 .art-offer{
     display: flex;
     flex-direction: column;
-    width: 240px;
-    margin: 2px;
+    width: calc(700px / 3);
     background-color: var(--color-gris);
+    border: 2px solid var(--color-blanco);
+    box-shadow: 2px 2px var(--color-rosa);
 }
+
+.art-offer h3{
+    font-size: 12px;
+}
+
+.art-offer>header {
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+.art-offer>header>p::before {
+    content: "$"attr(data-art-old-price);
+    display: inline-block;
+    font-size: 14px;
+    text-decoration: line-through;
+    transform: rotate(-10deg);
+    color: var(--color-blanco);
+}
+
+.art-offer>header>p {
+    padding-top: 5px;
+    font-size: 18px;
+    color: var(--color-verde);
+    text-align: center;
+}
+
 
 /* Imagenes de productos */
 .art-offer>img {
@@ -171,7 +196,7 @@ main section{
     /* border: 2px solid var(--color-rosa); */
     padding: 0;
     border-radius: 6px;
-    margin-top: 30px;
+    margin-top: 40px;
     margin-left: 80px;
     box-shadow: -0.4em 0 0.4em var(--color-rosa), 3px 3px var(--color-rosa);
 }
@@ -205,7 +230,7 @@ main section{
 .cards {
     border-radius: 10px;
     padding: 0;
-    margin-top: 30px;
+    margin-top: 40px;
     margin-right: 80px;
     margin-left: auto;
     box-shadow: -0.4em 0 0.4em var(--color-rosa), 3px 3px var(--color-rosa);
@@ -260,7 +285,7 @@ main section{
     display: flex;
     width: 100%;
     align-items: center;
-    margin: 30px 40px 30px 40px;
+    margin: 40px 40px 0px 40px;
     border-radius: 10px;
 }
 
@@ -311,6 +336,7 @@ main section{
 .currency{
     color: var(--color-blanco);
     text-shadow: var(--color-rosa) 3px 2px 2px;
+    margin-top: 40px;
     margin-left: 40px;
     padding: 20px;
     border-radius: 10px;
@@ -345,21 +371,21 @@ main section{
 .loading :nth-child(1) {
     background-color: var(--color-rosa);
     visibility: hidden;
-    animation: botones-carga 1s alternate 4 ease-in-out;
+    animation: botones-carga 1s alternate 3 ease-in-out;
     animation-delay: 0.2s;
 }
 
 .loading :nth-child(2) {
     background-color: var(--color-celeste);
     visibility: hidden;
-    animation: botones-carga 1s alternate 4 ease-in-out;
+    animation: botones-carga 1s alternate 3 ease-in-out;
     animation-delay: 0.4s;
 }
 
 .loading :nth-child(3) {
     background-color: var(--color-verde);
     visibility: hidden;
-    animation: botones-carga 1s alternate 4 ease-in-out;
+    animation: botones-carga 1s alternate 3 ease-in-out;
     animation-delay: 0.6s;
 }
 
@@ -373,12 +399,31 @@ main section{
     position: relative;
     bottom: 25px;
     padding-bottom: 5px;
-    animation: cotizacion-dolar 4.6s;
+    animation: cotizacion-dolar 3.6s;
+}
+
+
+/* AYUDA EN LINEA */
+.contact-support{
+    color: var(--color-blanco);
+    background-color: var(--color-verde);
+    border-radius: 8px;
+    position: sticky;
+    bottom: 10px;
+    margin-top: auto;
+    margin-left: auto;
+    height: 45px;
+}
+
+.contact-text{
+    font-weight: bold;
 }
 
 /* FOOTER */
 .main-footer{
-    background-color: violet;
+    background-color: var(--color-rosa);
+    width: 100%;
+    margin-top: 100px;
 }
 
 /* ESTILOS DE ...*/
